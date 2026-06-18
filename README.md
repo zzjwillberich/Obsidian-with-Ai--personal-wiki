@@ -1,9 +1,8 @@
 ﻿# Obsidian with AI - Personal Wiki Framework
 
-> 中文：这是一个可复用的 Obsidian + AI 个人知识库框架包。它只包含提示词、skills、模板、Schema、Obsidian 配置和空目录架构，不包含原知识库里的具体知识内容。
+> 中文：这是一个可复用的 Obsidian + AI 个人知识库框架包。它只包含提示词、skills、模板、Schema、Obsidian 配置和空目录架构。
 >
-> English: This is a reusable Obsidian + AI personal wiki framework package. It includes prompts, skills, templates, schemas, Obsidian configuration, and an empty vault structure only. It does not include the original knowledge notes.
-
+> English: This is a reusable Obsidian + AI personal wiki framework package. It includes prompts, skills, templates, schemas, Obsidian configuration, and an empty vault structure. 
 ## What This Is / 这是什么
 
 中文：这个仓库把一个「LLM Wiki 模式」知识库的运行规则抽离出来，让你可以快速搭建一个由 AI 协助维护的 Obsidian Vault。AI 的职责不是一次性回答问题，而是像程序员维护代码库一样，持续增量维护你的知识库。
