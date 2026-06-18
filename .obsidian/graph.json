@@ -1,0 +1,135 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#cpp-core OR tag:#cpp-grammar",
+      "color": {
+        "a": 1,
+        "rgb": 16611752
+      }
+    },
+    {
+      "query": "tag:#network",
+      "color": {
+        "a": 1,
+        "rgb": 16632686
+      }
+    },
+    {
+      "query": "tag:#db",
+      "color": {
+        "a": 1,
+        "rgb": 14774357
+      }
+    },
+    {
+      "query": "tag:#concurrency",
+      "color": {
+        "a": 1,
+        "rgb": 5631940
+      }
+    },
+    {
+      "query": "tag:#tools OR tag:#build",
+      "color": {
+        "a": 1,
+        "rgb": 7649791
+      }
+    },
+    {
+      "query": "tag:#creator",
+      "color": {
+        "a": 1,
+        "rgb": 16755456
+      }
+    },
+    {
+      "query": "tag:#strategy OR tag:#career OR tag:#learning",
+      "color": {
+        "a": 1,
+        "rgb": 8146431
+      }
+    },
+    {
+      "query": "tag:#english OR tag:#exam",
+      "color": {
+        "a": 1,
+        "rgb": 10656766
+      }
+    },
+    {
+      "query": "tag:#daily OR tag:#meta",
+      "color": {
+        "a": 1,
+        "rgb": 58998
+      }
+    },
+    {
+      "query": "path:system",
+      "color": {
+        "a": 1,
+        "rgb": 5467646
+      }
+    },
+    {
+      "query": "path:wiki/concepts",
+      "color": {
+        "a": 1,
+        "rgb": 7064439
+      }
+    },
+    {
+      "query": "path:wiki/topics",
+      "color": {
+        "a": 1,
+        "rgb": 5084927
+      }
+    },
+    {
+      "query": "path:wiki/lessons",
+      "color": {
+        "a": 1,
+        "rgb": 16747586
+      }
+    },
+    {
+      "query": "path:wiki/creator",
+      "color": {
+        "a": 1,
+        "rgb": 14702240
+      }
+    },
+    {
+      "query": "path:wiki/daily",
+      "color": {
+        "a": 1,
+        "rgb": 53971
+      }
+    },
+    {
+      "query": "path:raw",
+      "color": {
+        "a": 1,
+        "rgb": 16711914
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 1.97578125,
+  "lineSizeMultiplier": 0.699739583333333,
+  "collapse-forces": false,
+  "centerStrength": 0.4921875,
+  "repelStrength": 20,
+  "linkStrength": 0,
+  "linkDistance": 364,
+  "scale": 0.13168724279834837,
+  "close": true
+}

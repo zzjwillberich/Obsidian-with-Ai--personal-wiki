@@ -1,0 +1,134 @@
+# ============================================================
+# LLM Wiki Schema — 知识库结构与约定
+# 基于 Andrej Karpathy 的 LLM Wiki 模式
+# ============================================================
+
+wiki:
+  name: "我的知识库"
+  description: "由 LLM 维护的增量式个人知识体系"
+
+  # ---------- 目录结构 ----------
+  structure:
+    raw: "raw/"           # 原始资料（不可变，LLM 只读不改）
+    wiki: "wiki/"         # 知识库主体（LLM 全权维护）
+    system: "system/"      # 系统配置与提示词
+
+  # ---------- Wiki 子目录 ----------
+  wiki_sections:
+    concepts: "wiki/concepts/"   # 原子概念——单一、独立的知识单元
+    topics: "wiki/topics/"        # 主题页面——整合多个概念的综合讨论
+    daily: "wiki/daily/"          # 日常学习记录
+    lessons: "wiki/lessons/"     # 教学课程——分课时的教学大纲和讲义
+    creator: "wiki/creator/"      # 自媒体内容素材——选题、灵感、框架
+
+  # ---------- 命名约定 ----------
+  naming:
+    concept:
+      format: "{概念名}.md"
+      rule: "使用中文命名，简洁准确。概念名应是对'这是什么'的直接回答。"
+      examples:
+        - "反向传播.md"
+        - "Transformer架构.md"
+        - "费曼学习法.md"
+    topic:
+      format: "{主题名}.md"
+      rule: "可使用更宽泛的标题。若主题有缩略词，在括号中标注。"
+      examples:
+        - "深度学习优化算法综述.md"
+        - "个人知识管理方法论.md"
+    daily:
+      format: "YYYY-MM-DD.md"
+      rule: "ISO 日期格式"
+      examples:
+        - "2026-05-30.md"
+
+  # ---------- 链接约定 ----------
+  linking:
+    internal: "[[页面名]]"             # Obsidian Wiki-link
+    concept_to_concept: "双向链接"     # 两个关联概念必须互相链接
+    concept_to_topic: "概念 → 主题"   # 概念页链接到包含它的主题页
+    topic_to_concept: "主题 → 概念"   # 主题页链接到其包含的概念页
+    source_citation: "[[raw/文件名]]"  # 引用原始资料
+
+  # ---------- Frontmatter 字段 ----------
+  frontmatter:
+    concept:
+      required: [title, type, created, updated, tags]
+      optional: [aliases, sources, related, status, summary]
+      fields:
+        title: "页面标题"
+        type: "concept"
+        created: "创建日期 (YYYY-MM-DD)"
+        updated: "最后更新日期 (YYYY-MM-DD)"
+        tags: ["标签列表"]
+        aliases: ["别名列表——便于搜索"]
+        sources: ["引用的原始资料路径"]
+        related: ["相关概念或主题的 Wiki-link"]
+        status: "draft | mature | evergreen | stub"
+        summary: "一句话概括"
+    topic:
+      required: [title, type, created, updated, tags]
+      optional: [aliases, concepts, sources, status, summary]
+      fields:
+        title: "页面标题"
+        type: "topic"
+        created: "创建日期 (YYYY-MM-DD)"
+        updated: "最后更新日期 (YYYY-MM-DD)"
+        tags: ["标签列表"]
+        aliases: ["别名列表"]
+        concepts: ["包含的概念列表"]
+        sources: ["引用的原始资料"]
+        status: "draft | evolving | mature | stub"
+        summary: "一句话概括"
+
+  # ---------- 标签分类法 ----------
+  tags:
+    domain:
+      - cpp          # C++ 语言
+      - c            # C 语言
+      - os           # 操作系统
+      - network      # 计算机网络
+      - db           # 数据库
+      - compiler     # 编译原理
+      - ai           # 人工智能
+      - ml           # 机器学习
+      - dl           # 深度学习
+      - nlp          # 自然语言处理
+      - cv           # 计算机视觉
+      - rl           # 强化学习
+      - systems      # 系统工程
+      - math         # 数学
+      - cs           # 计算机科学
+      - pm           # 产品管理
+      - design       # 设计
+      - business     # 商业
+      - philosophy   # 哲学
+      - productivity # 生产力
+      - learning     # 学习方法
+      - creator      # 自媒体/内容创作
+      - career       # 职业发展
+      - strategy     # 策略/规划
+    type:
+      - concept      # 概念笔记
+      - topic        # 主题笔记
+      - reference    # 参考资料
+      - summary      # 摘要/总结
+      - question     # 待解答的问题
+    status:
+      - draft        # 草稿
+      - stub         # 骨架——仅占位待补全
+      - planned      # 已规划——选题/灵感但未动笔
+      - evolving     # 持续更新中
+      - mature       # 相对成熟
+      - evergreen    # 常青笔记（长期有效）
+      - review       # 需要复核
+
+  # ---------- 质量规则（Lint 检查项） ----------
+  quality_rules:
+    - "每个概念页至少有一个到其他页面或主题的链接"
+    - "每个主题页必须链接到至少一个概念页"
+    - "不能有孤立页面（没有任何内链指向它的页面）"
+    - "状态为 draft 的页面超过 30 天未更新，应标记为 review"
+    - "同名概念不应存在于两个不同页面"
+    - "断链（指向不存在页面的链接）必须修复"
+    - "每个页面应有一个 #type 标签和一个 #domain 标签"

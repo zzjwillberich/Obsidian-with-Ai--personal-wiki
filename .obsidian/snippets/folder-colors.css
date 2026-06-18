@@ -1,0 +1,177 @@
+/* ============================================================
+ * 多巴胺文件夹颜色 — Dopamine Folder Colors
+ * 每个文件夹一组高辨识度色，左侧导航一目了然
+ * ============================================================ */
+
+/* --- 🎨 色板全集 --- */
+/*
+ * 已分配 — 文件夹色：
+ *   #FFD93D → 明黄       raw/           (原始资料，温润待加工)
+ *   #7C8FA1 → 石板灰     system/        (系统配置，稳重低调)
+ *   #0ABDE3 → 天空蓝     system/prompts  (提示词，行动导向)
+ *   #FF6B9D → 骚粉       system/skills   (技能，高能醒目)
+ *   #9B59B6 → 紫罗兰     system/templates(模板，塑形工具)
+ *   #6BCB77 → 亮绿       wiki/concepts   (概念，生长中的思想)
+ *   #4D96FF → 电光蓝     wiki/topics     (主题，结构化总览)
+ *   #FF8C42 → 活力橙     wiki/lessons    (教学，主动学习)
+ *   #E056A0 → 洋红       wiki/creator    (创作，内容输出)
+ *   #00D2D3 → 青碧       wiki/daily      (日记，每日新鲜)
+ *   #A29BFE → 薰衣草紫   wiki/reading    (阅读，沉思沉淀)
+ *
+ * 已分配 — 板块色（图谱 tag 匹配 & 未来子文件夹）：
+ *   #FD79A8 → 樱花粉     #cpp-core       (C++ 语言核心：指针/RAII/编译)
+ *   #FDCB6E → 金盏黄     #network        (网络编程：socket/epoll/TCP/HTTP)
+ *   #E17055 → 陶土橙     #db             (数据库：MySQL/SQL)
+ *   #55EFC4 → 薄荷绿     #concurrency    (并发系统：线程池/内存模型)
+ *   #74B9FF → 天蓝       #tools          (工具链：CMake/Git/Debug/Release)
+ *
+ * 备用：
+ *   (暂无——所有可用色已分配)
+ */
+
+/* ============================================================
+ *   顶层文件夹
+ * ============================================================ */
+
+/* --- raw/ — 明黄 --- */
+.nav-folder-title[data-path="raw"] {
+  color: #FFD93D !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path="raw"] .nav-folder-title-content::before {
+  content: "📥 ";
+}
+
+/* --- system/ — 石板灰（低调容器色） --- */
+.nav-folder-title[data-path="system"] {
+  color: #7C8FA1 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path="system"] .nav-folder-title-content::before {
+  content: "⚙️ ";
+}
+
+/* ============================================================
+ *   system/ 子文件夹
+ * ============================================================ */
+
+/* --- system/prompts — 天空蓝 --- */
+.nav-folder-title[data-path="system/prompts"] {
+  color: #0ABDE3 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="system/prompts/"] {
+  color: #0ABDE3 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="system/prompts"] .nav-folder-title-content::before {
+  content: "📝 ";
+}
+
+/* --- system/skills — 骚粉 --- */
+.nav-folder-title[data-path="system/skills"] {
+  color: #FF6B9D !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="system/skills/"] {
+  color: #FF6B9D !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="system/skills"] .nav-folder-title-content::before {
+  content: "⚡ ";
+}
+
+/* --- system/templates — 紫罗兰 --- */
+.nav-folder-title[data-path="system/templates"] {
+  color: #9B59B6 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="system/templates/"] {
+  color: #9B59B6 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="system/templates"] .nav-folder-title-content::before {
+  content: "📄 ";
+}
+
+/* ============================================================
+ *   wiki/ 子文件夹
+ * ============================================================ */
+
+/* --- wiki/concepts — 亮绿 --- */
+.nav-folder-title[data-path="wiki/concepts"] {
+  color: #6BCB77 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/concepts/"] {
+  color: #6BCB77 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/concepts"] .nav-folder-title-content::before {
+  content: "🌱 ";
+}
+
+/* --- wiki/topics — 电光蓝 --- */
+.nav-folder-title[data-path="wiki/topics"] {
+  color: #4D96FF !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/topics/"] {
+  color: #4D96FF !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/topics"] .nav-folder-title-content::before {
+  content: "🧩 ";
+}
+
+/* --- wiki/lessons — 活力橙 --- */
+.nav-folder-title[data-path="wiki/lessons"] {
+  color: #FF8C42 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/lessons/"] {
+  color: #FF8C42 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/lessons"] .nav-folder-title-content::before {
+  content: "📖 ";
+}
+
+/* --- wiki/creator — 洋红 --- */
+.nav-folder-title[data-path="wiki/creator"] {
+  color: #E056A0 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/creator/"] {
+  color: #E056A0 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/creator"] .nav-folder-title-content::before {
+  content: "🎬 ";
+}
+
+/* --- wiki/daily — 青碧 --- */
+.nav-folder-title[data-path="wiki/daily"] {
+  color: #00D2D3 !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/daily/"] {
+  color: #00D2D3 !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/daily"] .nav-folder-title-content::before {
+  content: "📅 ";
+}
+
+/* --- wiki/reading — 薰衣草紫 --- */
+.nav-folder-title[data-path="wiki/reading"] {
+  color: #A29BFE !important;
+  font-weight: 600;
+}
+.nav-folder-title[data-path^="wiki/reading/"] {
+  color: #A29BFE !important;
+  opacity: 0.85;
+}
+.nav-folder-title[data-path="wiki/reading"] .nav-folder-title-content::before {
+  content: "📚 ";
+}

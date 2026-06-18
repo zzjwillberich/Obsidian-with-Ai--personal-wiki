@@ -1,0 +1,16 @@
+﻿# OS files
+.DS_Store
+Thumbs.db
+
+# Obsidian local workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Generated or private local state
+.claudian/
+build/
+
+# Do not commit populated raw/wiki content by accident when using this as a template.
+# Remove these rules in your own private vault if you want to version your notes.
+# raw/**
+# wiki/**
